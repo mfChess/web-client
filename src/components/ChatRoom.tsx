@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from "react";
-import {useUser} from "../context/UserContext";
+import {useUser} from "../context/userContext";
 import {MessageType, PayloadType} from "../types/MessageType"
 import styled from "styled-components";
 import ViewWrapper from "./common/ViewWrapper";

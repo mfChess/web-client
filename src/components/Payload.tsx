@@ -1,4 +1,4 @@
-import { useUser } from "context/UserContext";
+import { useUser } from "context/userContext";
 import styled from "styled-components";
 import { PayloadType } from "types/MessageType";
 

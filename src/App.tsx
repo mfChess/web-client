@@ -5,7 +5,6 @@ import { AnimatePresence } from "framer-motion";
 
 //* import local (utils)
 import ThemeColorContext from "./context/colorContext";
-import {UserProvider} from "./context/UserContext";
 
 //* import local (pages)
 import Index from "components/pages/index/IndexView";
@@ -24,9 +23,7 @@ const App = (): JSX.Element => {
   const [themeColor, setThemeColor] = useState<string>("#287485");
 
   //* render
-  return (
-    <UserProvider>
-      <ThemeColorContext.Provider value={themeColor}>
+  return (      
         <AnimatePresence mode="wait">
           <Routes key={location.pathname} location={location}>
             <Route path="/" element={<Index />} />
@@ -38,8 +35,6 @@ const App = (): JSX.Element => {
             <Route path="/chatroom" element={<ChatRoom />} />
           </Routes>
         </AnimatePresence>
-      </ThemeColorContext.Provider>
-    </UserProvider>
   );
   
 }

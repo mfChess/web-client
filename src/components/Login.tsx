@@ -1,9 +1,9 @@
 import { SetStateAction, useEffect, useState } from "react";
 import {useNavigate} from 'react-router-dom';
-import {defaultUser, useUser} from "../context/UserContext";
-import {UserType} from "../types/UserType"
+import {defaultUser, useUser} from "context/userContext";
+import {UserType} from "types/UserType"
 
-import AxiosInstance from "../utils/axiosInstance";
+import AxiosInstance from "../api/AxiosInstance";
 
 /**
  * * FC for login button, the prompt also pops up if not currently logged in.
@@ -77,9 +77,7 @@ const Login: React.FunctionComponent = ()  => {
    * TODO Make logout look better! as well as the whole page!!
    */
   return (
-    <div>
-      {user!.loggedIn ? <button onClick={signOut}> Logout </button> : <div id="buttonDiv"></div>}
-    </div>
+    <></>
   );
 }
 
